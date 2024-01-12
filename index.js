@@ -87,7 +87,7 @@ function init() {
           message:'How to use your app?',
         }
          .then((answers)) => {
-            const readmeContent = generateMarkdown(answers);
+            const readMeContent = generateMarkdown(answers);
 
         }
       ]);
