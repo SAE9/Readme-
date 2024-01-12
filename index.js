@@ -39,8 +39,7 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-    inquirer
-    .prompt([
+    inquirer.prompt([
         {
           type: 'input',
           name: 'title',
@@ -54,25 +53,40 @@ function init() {
         {
           type: 'input',
           name: 'table of contents',
-          message: 'What is your table of contents?',
+          message: 'What is included?',
         },
         {
           type: 'input',
           name: 'installation',
-          message: 'What is your favorite food?',
+          message: 'How to install your project?',
         },
         {
           type: 'input',
           name: 'usage',
-          message: 'Enter your GitHub Username',
+          message:'How to use your app?',
+        },
+        {
+          type: 'list',
+          name: 'license',
+          license:['Academic Free License','Apache-2.0','Artistic-2.0','BSL-1.0','BSD-2-Clause','CC','EPL-1.0','AGPL','ISC','MS-PL','MIT','MPL-2.0','OSL-3.0','N/A']
+
         },
         {
           type: 'input',
-          name: 'license',
-          message: 'Enter your LinkedIn URL.',
+          name: 'contributions',
+          message:'List people who contributed on this project?',
         },
-
-          .then((answers)) => {
+        {
+          type: 'input',
+          name: 'Tests',
+          message:'What are the tests instructions?',
+        },
+        {
+          type: 'input',
+          name: 'questions',
+          message:'How to use your app?',
+        }
+         .then((answers)) => {
             const readmeContent = generateMarkdown(answers);
 
         }
