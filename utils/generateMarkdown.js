@@ -1,4 +1,4 @@
-//function to rendeder license badge 
+//function to render license badge 
 function renderLicenseBadge(license) {
   if (license === 'Academic Free License') {
     return '[![license: AFL](https://img.shields.io/badge/License-AFL-red.svg)](https://opensource.org/licenses/AFL)';
@@ -19,7 +19,7 @@ function renderLicenseBadge(license) {
 function generateMarkdown(data) {
   
   const licenseBadge = renderLicenseBadge(data.license);
-  
+
   return `# ${data.title}
 
   ## Description 

@@ -38,7 +38,7 @@ const questions = [
     message:'How to use your app?',
   },
   {
-    type: 'list',
+    type: 'choices',
     name: 'license',
     license:['Academic Free License','Apache-2.0','BSD-2-Clause','ISC','MIT','N/A']
 
