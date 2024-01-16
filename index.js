@@ -85,13 +85,13 @@ const promptUser = async () => {
         },
         {
           type: 'input',
-          name: 'questions',
+          name: 'gitHub',
           message:'What is your GitHub username?',
           
-        }
+        },
         {
           type: 'input',
-          name: 'questions',
+          name: 'email',
           message:'What is your email?',
           
         },
@@ -101,7 +101,7 @@ const promptUser = async () => {
     }
     };
     
-// Bonus using async/await and try/catch
+// Using async/await and try/catch
 const init = async () => {
     console.log('Generating README');
     try {
