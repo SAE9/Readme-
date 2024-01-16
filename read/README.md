@@ -3,7 +3,7 @@
   ## Description 
   lol
 
-  [[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+  [![license: AFL](https://img.shields.io/badge/License-AFL-red.svg)](https://opensource.org/licenses/AFL)
 
   ## Table of Contents
 - [Installation](#installation)
@@ -20,7 +20,7 @@ lol
 lol
 
 ## License
-This project is license under MIT.
+This project is license under Academic Free License.
 
 
 ## Contributing
@@ -33,7 +33,7 @@ lol
 
 ## Questions
 Github - undefined
-Email - lol
-For any questions, please contact [undefined](https:github.com/undefined) or email at (lol).
+Email - gold@hotmail.com
+
 
 
