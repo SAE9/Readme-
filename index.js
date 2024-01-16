@@ -19,7 +19,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add an answer"
+      return "Please add an title"
     }
     }
     //Validation ensure user inputs an answer to move on
@@ -31,18 +31,18 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add an answer"
+      return "Please add an desciption"
     }
     }
   },
   {
     type: 'input',
     name: 'table of contents',
-    message: 'What is included?',
+    message: 'What is included in your table of contents?',
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add an answer"
+      return "Please add a table of contents"
     }
     }
   },
@@ -64,7 +64,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add an answer"
+      return "Please add how to use your application"
     }
     }
   },
@@ -73,6 +73,17 @@ const questions = [
     name: 'license',
     message: 'Choose a license for your project:',
     choices: ['Academic Free License', 'Apache-2.0', 'BSD-2-Clause', 'ISC', 'MIT', 'N/A'],
+  },
+  {
+    type: 'input',
+    name: 'contributions',
+    message: 'Who contributed on this project',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please mention github emails or write sole author"
+    }
+    }
   },
   {
     type: 'input',
@@ -92,7 +103,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add an answer"
+      return "Please add your Github"
     }
     }
     
@@ -104,7 +115,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add an answer"
+      return "Please add your email"
     }
     }
     
@@ -123,9 +134,14 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((answers) => {
     console.log('Generating README');
+    try {
      writeToFile("./read/README.md", generateMarkdown({ ...answers })); 
      // Creates a readme file and puts it into the read folder and allows answers to be stored into that folder
+    } catch (error) {
+      console.error('Error when generating ReadMe file:', error.message);
+    }
   });
+
 } 
 
 

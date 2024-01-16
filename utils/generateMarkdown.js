@@ -56,8 +56,7 @@ ${data.tests}
 
 
 ## Questions
-Github - ${data.githubUsername}
-Email - ${data.email}
+For further questions, please contact me at my github, ${data.githubUsername} or email me at ${data.email}.
 
 
 
