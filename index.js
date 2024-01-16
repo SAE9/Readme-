@@ -40,7 +40,8 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 const promptUser = async () => {
-  return inquirer.prompt([
+  try {
+   return await inquirer.prompt([
         {
           type: 'input',
           name: 'title',
@@ -79,7 +80,7 @@ const promptUser = async () => {
         },
         {
           type: 'input',
-          name: 'Tests',
+          name: 'tests',
           message:'What are the tests instructions?',
         },
         {
@@ -93,25 +94,22 @@ const promptUser = async () => {
           name: 'questions',
           message:'What is your email?',
           
-        }
-         .then((answers)) => {
-            const readMeContent = generateMarkdown(answers);
-
-        }
+        },
       ]);
+    } catch (error) {
+      console.error ('Error occur during user prompt:', error);
     }
+    };
     
 // Bonus using async/await and try/catch
 const init = async () => {
-    console.log('hi');
+    console.log('Generating README');
     try {
       const answers = await promptUser();
+      const readmeContent = generateMarkdown(answers);
+      writeToFile('README.md', readmeContent);
   
-      const  = generateHTML(answers);
-  
-      await writeFileAsync('index.html', html);
-  
-      console.log('Successfully wrote to index.html');
+      console.log('Successfully wrote to README,md');
     } catch (err) {
       console.log(err);
     }
