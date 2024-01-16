@@ -70,7 +70,7 @@ const promptUser = async () => {
         {
           type: 'list',
           name: 'license',
-          license:['Academic Free License','Apache-2.0','Artistic-2.0','BSL-1.0','BSD-2-Clause','CC','EPL-1.0','AGPL','ISC','MS-PL','MIT','MPL-2.0','OSL-3.0','N/A']
+          license:['Academic Free License','Apache-2.0','BSD-2-Clause','ISC','MIT','N/A']
 
         },
         {
