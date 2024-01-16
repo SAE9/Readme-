@@ -1,9 +1,9 @@
-# 
+# lol
 
   ## Description 
-  
+  lol
 
-  
+  [[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Table of Contents
 - [Installation](#installation)
@@ -14,29 +14,26 @@
 - [Questions](#questions)
 
 ## Installation
-
+lol
 
 ## Usage
-
+lol
 
 ## License
-This project is license under .
+This project is license under MIT.
 
 
 ## Contributing
 undefined
 
 ## Tests
+lol
 
 
-## Github
-undefined
-
-## Email
-undefined
 
 ## Questions
-For any questions, please contact [undefined](https:github.com/undefined) or email at $(data.email).
-
+Github - undefined
+Email - lol
+For any questions, please contact [undefined](https:github.com/undefined) or email at (lol).
 
 

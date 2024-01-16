@@ -3,13 +3,13 @@ function renderLicenseBadge(license) {
   if (license === 'Academic Free License') {
     return '[![license: AFL](https://img.shields.io/badge/License-AFL-red.svg)](https://opensource.org/licenses/AFL)';
   } else if (license === 'Apache-2.0') {
-    return '[[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+    return '[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
   }else if (license === 'BSD-2-Clause') {
-    return '[[![License: BSD-2-Clause](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)';
+    return '[![License: BSD-2-Clause](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)';
   }else if (license === 'ISC') {
-    return '[[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)';
+    return '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)';
   }else if (license === 'MIT') {
-    return '[[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
   }
 // if the license is not recognised it returns as empty string
   return "";
@@ -56,7 +56,7 @@ ${data.tests}
 ## Questions
 Github - ${data.githubUsername}
 Email - ${data.email}
-For any questions, please contact [${data.githubUsername}](https:github.com/${data.githubUsername}) or email at (${data.email}).
+
 
 
 `;
