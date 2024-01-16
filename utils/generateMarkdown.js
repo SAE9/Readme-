@@ -52,9 +52,11 @@ ${data.contributions}
 ${data.tests}
 
 
-## Questions
-For any questions, please contact [${data.githubUsername}](https:github.com/${data.githubUsername}) or email at $(data.email).
 
+## Questions
+Github - ${data.githubUsername}
+Email - ${data.email}
+For any questions, please contact [${data.githubUsername}](https:github.com/${data.githubUsername}) or email at (${data.email}).
 
 
 `;

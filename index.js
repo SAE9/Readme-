@@ -16,53 +16,96 @@ const questions = [
     type: 'input',
     name: 'title',
     message: 'What is the title of your project?',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please add a value"
+    }
+    }
   },
   {
     type: 'input',
     name: 'description',
     message: 'Describe your project?',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please add a value"
+    }
+    }
   },
   {
     type: 'input',
     name: 'table of contents',
     message: 'What is included?',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please add a value"
+    }
+    }
   },
   {
     type: 'input',
     name: 'installation',
     message: 'How to install your project?',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please add a value"
+    }
+    }
   },
   {
     type: 'input',
     name: 'usage',
     message:'How to use your app?',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please add a value"
+    }
+    }
   },
   {
-    type: 'choices',
+    type: 'list',
     name: 'license',
-    license:['Academic Free License','Apache-2.0','BSD-2-Clause','ISC','MIT','N/A']
-
-  },
-  {
-    type: 'input',
-    name: 'contributions',
-    message:'List people who contributed on this project?',
+    message: 'Choose a license for your project:',
+    choices: ['Academic Free License', 'Apache-2.0', 'BSD-2-Clause', 'ISC', 'MIT', 'N/A'],
   },
   {
     type: 'input',
     name: 'tests',
     message:'What are the tests instructions?',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please add a value"
+    }
+    }
   },
   {
     type: 'input',
     name: 'gitHub',
     message:'What is your GitHub username?',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please add a value"
+    }
+    }
     
   },
   {
     type: 'input',
     name: 'email',
     message:'What is your email?',
+    validate: (value) => { if (value) {
+      return true
+    }else {
+      return "Please add a value"
+    }
+    }
     
   },
 
@@ -96,9 +139,10 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((answers) => {
     console.log('Generating README');
-    writeToFile("./read/README.md", generateMarkdown({ ...answers }));
+     writeToFile("./read/README.md", generateMarkdown({ ...answers }));
   });
-}
+} 
+
 
 // const promptUser = async () => {
 //   try {
