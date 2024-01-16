@@ -19,7 +19,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add a value"
+      return "Please add an answer"
     }
     }
   },
@@ -30,7 +30,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add a value"
+      return "Please add an answer"
     }
     }
   },
@@ -41,7 +41,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add a value"
+      return "Please add an answer"
     }
     }
   },
@@ -52,7 +52,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add a value"
+      return "Please add an answer"
     }
     }
   },
@@ -63,7 +63,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add a value"
+      return "Please add an answer"
     }
     }
   },
@@ -80,18 +80,18 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add a value"
+      return "Please add an answer"
     }
     }
   },
   {
     type: 'input',
-    name: 'gitHub',
+    name: 'githubUsername',
     message:'What is your GitHub username?',
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add a value"
+      return "Please add an answer"
     }
     }
     
@@ -103,7 +103,7 @@ const questions = [
     validate: (value) => { if (value) {
       return true
     }else {
-      return "Please add a value"
+      return "Please add an answer"
     }
     }
     
