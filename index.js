@@ -12,6 +12,60 @@ const { type } = require("os");
 
 // array of questions for user
 const questions = [
+  {
+    type: 'input',
+    name: 'title',
+    message: 'What is the title of your project?',
+  },
+  {
+    type: 'input',
+    name: 'description',
+    message: 'Describe your project?',
+  },
+  {
+    type: 'input',
+    name: 'table of contents',
+    message: 'What is included?',
+  },
+  {
+    type: 'input',
+    name: 'installation',
+    message: 'How to install your project?',
+  },
+  {
+    type: 'input',
+    name: 'usage',
+    message:'How to use your app?',
+  },
+  {
+    type: 'list',
+    name: 'license',
+    license:['Academic Free License','Apache-2.0','BSD-2-Clause','ISC','MIT','N/A']
+
+  },
+  {
+    type: 'input',
+    name: 'contributions',
+    message:'List people who contributed on this project?',
+  },
+  {
+    type: 'input',
+    name: 'tests',
+    message:'What are the tests instructions?',
+  },
+  {
+    type: 'input',
+    name: 'gitHub',
+    message:'What is your GitHub username?',
+    
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message:'What is your email?',
+    
+  },
+
 
 ];
 
@@ -39,81 +93,31 @@ function writeToFile(fileName, data) {
 //   * When a user clicks on the links in the **Table of Contents** then they are taken to the corresponding section of the README
 
 // function to initialize program
-const promptUser = async () => {
-  try {
-   return await inquirer.prompt([
-        {
-          type: 'input',
-          name: 'title',
-          message: 'What is the title of your project?',
-        },
-        {
-          type: 'input',
-          name: 'description',
-          message: 'Describe your project?',
-        },
-        {
-          type: 'input',
-          name: 'table of contents',
-          message: 'What is included?',
-        },
-        {
-          type: 'input',
-          name: 'installation',
-          message: 'How to install your project?',
-        },
-        {
-          type: 'input',
-          name: 'usage',
-          message:'How to use your app?',
-        },
-        {
-          type: 'list',
-          name: 'license',
-          license:['Academic Free License','Apache-2.0','BSD-2-Clause','ISC','MIT','N/A']
-
-        },
-        {
-          type: 'input',
-          name: 'contributions',
-          message:'List people who contributed on this project?',
-        },
-        {
-          type: 'input',
-          name: 'tests',
-          message:'What are the tests instructions?',
-        },
-        {
-          type: 'input',
-          name: 'gitHub',
-          message:'What is your GitHub username?',
-          
-        },
-        {
-          type: 'input',
-          name: 'email',
-          message:'What is your email?',
-          
-        },
-      ]);
-    } catch (error) {
-      console.error ('Error occur during user prompt:', error);
-    }
-    };
-    
-// Using async/await and try/catch
-const init = async () => {
+function init() {
+  inquirer.prompt(questions).then((answers) => {
     console.log('Generating README');
-    try {
-      const answers = await promptUser();
-      const readmeContent = generateMarkdown(answers);
-      writeToFile('README.md', readmeContent);
+    writeToFile("./read/README.md", generateMarkdown({...answers}));
+  });
+}
+
+// const promptUser = async () => {
+//   try {
+//    return await inquirer.prompt([
+    
+    
+// // Using async/await and try/catch
+// const init = async () => {
+//     console.log('Generating README');
+//     try {
+//       const answers = await promptUser();
+//       const readmeContent = generateMarkdown(answers);
+//       writeToFile('README.md', readmeContent);
   
-      console.log('Successfully wrote to README,md');
-    } catch (err) {
-      console.log(err);
-    }
-  };
+//       console.log('Successfully wrote to README,md');
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   };
 // function call to initialize program
 
 init();
