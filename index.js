@@ -17,6 +17,7 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 // Create a command-line application that accepts user input.
 // * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
@@ -38,8 +39,8 @@ function writeToFile(fileName, data) {
 //   * When a user clicks on the links in the **Table of Contents** then they are taken to the corresponding section of the README
 
 // function to initialize program
-function init() {
-    inquirer.prompt([
+const promptUser = async () => {
+  return inquirer.prompt([
         {
           type: 'input',
           name: 'title',
@@ -84,7 +85,14 @@ function init() {
         {
           type: 'input',
           name: 'questions',
-          message:'How to use your app?',
+          message:'What is your GitHub username?',
+          
+        }
+        {
+          type: 'input',
+          name: 'questions',
+          message:'What is your email?',
+          
         }
          .then((answers)) => {
             const readMeContent = generateMarkdown(answers);
@@ -99,7 +107,7 @@ const init = async () => {
     try {
       const answers = await promptUser();
   
-      const html = generateHTML(answers);
+      const  = generateHTML(answers);
   
       await writeFileAsync('index.html', html);
   
@@ -109,4 +117,5 @@ const init = async () => {
     }
   };
 // function call to initialize program
+
 init();
