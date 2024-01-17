@@ -46,8 +46,9 @@ ${data.usage}
 ## License
 This project is license under ${data.license}.
 
+${licenseBadge}
 
-## Contributing
+## Contributions
 ${data.contributions}
 
 ## Tests
