@@ -81,7 +81,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'contributing',
+    name: 'contributions',
     message: 'Who contributed on this project',
     validate: (value) => {
       if (value.trim()) {
