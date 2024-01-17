@@ -33,7 +33,7 @@ function generateMarkdown(data) {
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contributions)
+- [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
@@ -48,7 +48,7 @@ This project is license under ${data.license}.
 
 
 ## Contributing
-${data.contributions}
+${data.con}
 
 ## Tests
 ${data.tests}

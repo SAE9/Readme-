@@ -16,11 +16,12 @@ const questions = [
     type: 'input',
     name: 'title',
     message: 'What is the title of your project?',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please add an title"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please provide a title";
+      }
     }
     //Validation ensure user inputs an answer to move on
   },
@@ -28,44 +29,48 @@ const questions = [
     type: 'input',
     name: 'description',
     message: 'Describe your project?',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please add an desciption"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please add description";
+      }
     }
   },
   {
     type: 'input',
     name: 'table of contents',
     message: 'What is included in your table of contents?',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please add a table of contents"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please provide a valid answer";
+      }
     }
   },
   {
     type: 'input',
     name: 'installation',
     message: 'How to install your project?',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please add an answer"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please provide a valid answer";
+      }
     }
   },
   {
     type: 'input',
     name: 'usage',
     message:'How to use your app?',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please add how to use your application"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please descripe how to use the app'";
+      }
     }
   },
   {
@@ -76,35 +81,38 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'contributions',
+    name: 'contributing',
     message: 'Who contributed on this project',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please mention github emails or write sole author"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please mention GitHub usernames, emails, or write 'sole author'";
+      }
     }
   },
   {
     type: 'input',
     name: 'tests',
     message:'What are the tests instructions?',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please add an answer"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please provide an answer or write n/a";
+      }
     }
   },
   {
     type: 'input',
     name: 'githubUsername',
     message:'What is your GitHub username?',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please add your Github"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please mention GitHub usernames";
+      }
     }
     
   },
@@ -112,11 +120,12 @@ const questions = [
     type: 'input',
     name: 'email',
     message:'What is your email?',
-    validate: (value) => { if (value) {
-      return true
-    }else {
-      return "Please add your email"
-    }
+    validate: (value) => {
+      if (value.trim()) {
+        return true;
+      } else {
+        return "Please add an emails";
+      }
     }
     
   },
