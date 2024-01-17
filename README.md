@@ -41,8 +41,8 @@ Note: Must already have node.js installed.
 ## Usage 
 
 1) Open application on vs code and in terminal run programme by typing node index.js and answer the questions to generate readMe file.
-![see here](./assets/rpg-1.png)
-![see here](./assets/rpg-2.png)
+![see here](assets/rg-1.png)
+![see here](assets/rg-1.png)
 
 
 ## Credits
