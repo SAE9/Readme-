@@ -36,6 +36,7 @@ When prompted for information about the application repository, the application 
 3) Start application on VS code
 
 Note: Must already have node.js installed.
+Must have inquirer package installed.
 
 
 ## Usage 
